@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context="com.parkhappy.hm.phv1application.ListActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/titlelayout"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PARK HAPPY"
+            android:padding="10dp"
+            android:id="@+id/textView5"
+            android:textColor="#fff"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:padding="5dp"
+        android:layout_below="@+id/titlelayout"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:id="@+id/linearLayout2"
+        android:layout_centerHorizontal="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="Cheapest"
+                android:textAllCaps="false"
+                android:id="@+id/cheapestbtn"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:background="#fff" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_weight="1" >
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="Closest"
+                android:textAllCaps="false"
+                android:id="@+id/closestbtn"
+                android:textColor="#fff"
+                android:background="@color/colorPrimary"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/lv"
+        android:layout_below="@+id/relativeLayout">
+
+    </ListView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@color/lightBlue"
+        android:id="@+id/relativeLayout"
+        android:layout_below="@+id/ccLayout"
+        android:layout_alignParentEnd="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:text="Available Parking Lots"
+            android:foregroundGravity="center"
+            android:id="@+id/textView6" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:weightSum="10"
+        android:background="#fff"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout2"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/ccLayout">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="80dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="5dp"
+                    android:id="@+id/ccimg"
+                    android:src="@drawable/cheapest"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true" />
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="80dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="5dp"
+                    android:id="@+id/ccimg2"
+                    android:src="@drawable/closest"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:textColor="#000"
+                android:text="Name"
+                android:textStyle="bold"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/nametxt"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/ccimg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address oijnin oijijijn oidjnionio 0ojojm cv fd"
+                android:paddingTop="7dp"
+                android:textSize="12sp"
+                android:textColor="@color/gray"
+                android:id="@+id/addrtxt"
+                android:layout_below="@+id/nametxt"
+                android:layout_toEndOf="@+id/ccimg" />
+
+            <!--<ImageView-->
+                <!--android:layout_width="100dp"-->
+                <!--android:layout_height="25dp"-->
+                <!--android:id="@+id/imageView8"-->
+                <!--android:src="@drawable/s4"-->
+                <!--android:layout_below="@+id/ccimg"-->
+                <!--android:layout_toEndOf="@+id/ccimg" />-->
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="90dp"
+                android:id="@+id/imageView9"
+                android:src="@drawable/icns"
+                android:layout_toStartOf="@+id/mekdisttxt"
+                android:layout_alignParentTop="true"
+                android:layout_above="@+id/detbtn" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="2"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="$111"
+                    android:paddingBottom="10dp"
+                    android:textColor="#000"
+                    android:id="@+id/pricetxt"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:gravity="bottom" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1.5Km"
+                    android:paddingTop="10dp"
+                    android:gravity="top"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:id="@+id/disttxt" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    android:id="@+id/itemlayout">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:weightSum="10"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="80dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="5dp"
+                android:id="@+id/imageView4"
+                android:src="@drawable/carimg"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:textColor="#000"
+                android:text="Name"
+                android:textStyle="bold"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/nametxt"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/imageView4" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address oijnin oijijijn oidjnionio 0ojojm cv fd"
+                android:paddingTop="7dp"
+                android:textSize="12sp"
+                android:textColor="@color/gray"
+                android:id="@+id/addrtxt"
+                android:layout_below="@+id/nametxt"
+                android:layout_toEndOf="@+id/imageView4" />
+
+            <!--<ImageView-->
+                <!--android:layout_width="100dp"-->
+                <!--android:layout_height="25dp"-->
+                <!--android:id="@+id/imageView5"-->
+                <!--android:src="@drawable/s4"-->
+                <!--android:layout_below="@+id/imageView4"-->
+                <!--android:layout_toEndOf="@+id/imageView4" />-->
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="90dp"
+                android:id="@+id/imageView6"
+                android:src="@drawable/icns"
+                android:layout_toStartOf="@+id/mekdisttxt"
+                android:layout_alignParentTop="true"
+                android:layout_above="@+id/detbtn" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="2"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="$111"
+                    android:paddingBottom="10dp"
+                    android:textColor="#000"
+                    android:id="@+id/pricetxt"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:gravity="bottom" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1.5Km"
+                    android:paddingTop="10dp"
+                    android:gravity="top"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:id="@+id/disttxt" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
